@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fibonacci Series</title>
+</head>
+<body>
+
+<script>
+   function fibonacciSeries() {
+     var userInput = window.prompt("Enter the number of terms for Fibonacci series:");
+
+     if (userInput !== null) {
+      var numberOfTerms = parseInt(userInput);
+
+      if (!isNaN(numberOfTerms) && numberOfTerms >= 0) {
+        var fibonacciArray = [0, 1];
+       for (var i = 2; i < numberOfTerms; i++) {
+       fibonacciArray[i] = fibonacciArray[i - 1] + fibonacciArray[i - 2];
+        }
+        alert("Fibonacci Series: " + fibonacciArray.join(", "));
+      } else {
+        
+        alert("Please enter a valid positive number.");
+      }
+    }
+  }
+ fibonacciSeries();
+</script>
+
+</body>
+</html>
